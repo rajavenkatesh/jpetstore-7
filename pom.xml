@@ -163,6 +163,11 @@
           <version>3.1.0</version>
         </plugin>
         <plugin>
+           <groupId>org.codehaus.mojo</groupId>
+           <artifactId>sonar-maven-plugin</artifactId>
+           <version>2.7</version>
+        </plugin>
+        <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-site-plugin</artifactId>
           <configuration>
@@ -207,6 +212,14 @@
 
     <clirr.comparisonVersion>6.0.2</clirr.comparisonVersion>
   </properties>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>      
+    <sonar.jdbc.url>jdbc:mysql://localhost:3306/sonar</sonar.jdbc.url>
+    <sonar.jdbc.username>raja</sonar.jdbc.username>
+    <sonar.jdbc.password>raja</sonar.jdbc.password>
+   </properties>
 
   <profiles>
     <!-- Profiles for Integration tests -->
